@@ -4,6 +4,13 @@
 **Author:** olehermanse ( http://www.github.com/olehermanse )<br>
 **License:** The MIT License<br>
 
+**INF2270-Assembly**
+
+This repository includes several basic examples of assembly code written by a group
+teacher for group lectures in INF2270 - Computer Architecture. All examples are using
+AT&T syntax, and compiled using 32 bit mode (Makefiles included). All code and comments
+are in English.<br>
+
 **The MIT License (MIT)**
 
 Copyright (c) 2015 olehermanse<br>
@@ -26,10 +33,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.<br>
 <br>
-
-**INF2270-Assembly**
-
-This repository includes several basic examples of assembly code written by a group
-teacher for group lectures in INF2270 - Computer Architecture. All examples are using
-AT&T syntax, and compiled using 32 bit mode (Makefiles included). All code and comments
-are in English.

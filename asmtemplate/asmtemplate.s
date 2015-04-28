@@ -6,7 +6,7 @@
 
 # Simple beginner function in asm, equivalent to:
 # int asmtemplate(int input)
-# 	return input + input;
+# 	return input + 9000;
 
 _asmtemplate:				# Mac OSX Compatibility
 asmtemplate:
@@ -19,8 +19,8 @@ asmtemplate:
 	# Argument is at 8(%ebp)
 	movl 8(%ebp), %eax		# ( movl src, dest )
 	
-	# Double the value by adding to itself :
-	addl 8(%ebp), %eax
+	# Add 9000 to the value
+	addl $9000, %eax
 	
 	# restore and return
 	pop %ebp

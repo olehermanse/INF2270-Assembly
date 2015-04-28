@@ -4,8 +4,8 @@
 #include <stdio.h>
 
 // Test program sends argument to assembly function and prints return value: 
-extern int _callCFunc(int input);
+extern int callCFunc(int input);
 int main(void){
-	printf(	"Assembly function returned: %d\n", _callCFunc(21));
+	printf(	"Assembly function returned: %d\n", callCFunc(21));
 	return 0;
 }

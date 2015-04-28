@@ -16,7 +16,7 @@ callCFunc:
 	pushl %eax
 
 	# Call our c function from cFunc.c with argument on stack:
-	call cFunc
+	call _cFunc
 
 	# Remove argument from stack after function call:
 	popl %ecx

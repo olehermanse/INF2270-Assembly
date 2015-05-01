@@ -13,4 +13,5 @@ int memCopy(char* dest, char* src, int n){
         return 0;
 }
 ```
-No error checking is done, this is left as an exercise for the reader.
+No error checking is done, this is left as an exercise for the reader.<br>
+[<- Back to table of contents](./../)<br>

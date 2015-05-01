@@ -8,7 +8,8 @@ extern int asciiConvert(int input);
 
 // Print result for given integer value
 void testForValue(int val){
-	printf(	"ASCII value of '%i' = %d\n", val, asciiConvert(val));
+  int rval = asciiConvert(val);
+	printf(	"%i converted to ascii: '%c' = %i\n", val, (char)rval, rval);
 }
 
 // Test some possible inputs:

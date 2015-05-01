@@ -10,7 +10,6 @@ teacher for group lectures in INF2270 - Computer Architecture. All examples are 
 AT&T syntax, and compiled using 32 bit mode (Makefiles included). All code and comments
 are in English.<br>
 
-#TOC
 **Table of contents:**<br>
 1. [Basic assembly template](./asmtemplate/)<br>
 2. [Convert an integer(0-9) to its ascii representation](./asciiConvert/)<br>

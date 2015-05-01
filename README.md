@@ -4,17 +4,17 @@
 **Author:** olehermanse ( http://www.github.com/olehermanse )<br>
 **License:** The MIT License<br>
 
-**Assembly language sample code (INF2270 - Computer Architecture)**
+**Assembly language sample code (INF2270 - Computer Architecture)**<br>
+This repository includes several basic examples of assembly code written by a group
+teacher for group lectures in INF2270 - Computer Architecture. All examples are using
+AT&T syntax, and compiled using 32 bit mode (Makefiles included). All code and comments
+are in English.<br>
+
 Table of contents:<br>
 [1. Basic assembly template](./asmtemplate/)<br>
 [2. Convert an integer(0-9) to its ascii representation](./asciiConvert/)<br>
 [3. Calling a function written in C from assembly code](./callCFunc/)<br>
 [4. Copying bytes in memory(memcpy)](./memCopy/)<br>
-
-This repository includes several basic examples of assembly code written by a group
-teacher for group lectures in INF2270 - Computer Architecture. All examples are using
-AT&T syntax, and compiled using 32 bit mode (Makefiles included). All code and comments
-are in English.<br>
 
 **The MIT License (MIT)**
 

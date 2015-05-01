@@ -10,4 +10,4 @@ int asmtemplate(int input){
         return input + 9000;
 }
 ```
-[<- Back to table of contents](./../)<br>
+[<- Back to table of contents](./)<br>

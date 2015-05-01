@@ -5,7 +5,7 @@ we will always use a testprogram in C to test our assembly functions ( routines 
 The function in this example takes an integer n and returns (n + 9000). It is equivalent
 to:<br>
 
-``
+```C
 int asmtemplate(int input){
         return input + 9000;
 }

@@ -1,4 +1,3 @@
-
 // Simple code sample for memcpy-like function in asm (AT&T)
 // Author: github.com/olehermanse
 
@@ -16,8 +15,8 @@ int main(void){
   char dest[256];
   int rval = 0;
 
-  sprintf(src, "Hey World!");//Set up src buffer
-  rval = memCopy(dest,src,strlen(src)+1);//Call assembly function
+  sprintf(src, "Hey World!");                       // Set up src buffer
+  rval = memCopy(dest,src,strlen(src)+1);           // Call assembly function
   
   printf("Assembly function returned: %d\n", rval);
   printf("Source buffer: '%s'\n", src);

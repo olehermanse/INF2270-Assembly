@@ -6,6 +6,6 @@
 // Test program sends argument to assembly function and prints return value: 
 extern int callCFunc(int input);
 int main(void){
-	printf(	"Assembly function returned: %d\n", callCFunc(21));
-	return 0;
+    printf("Assembly function returned: %d\n", callCFunc(21));
+    return 0;
 }

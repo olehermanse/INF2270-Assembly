@@ -1,17 +1,10 @@
-This example uses the esi and edi registers to copy data from one address in memory
-to another. It is equivalent to:<br>
+This simple example shows how float variables are passed as arguments and 
+returned by functions.<br>
 
 ```C
-int floatMultiply(char* dest, char* src, int n){
-    // Copy data and increment pointers n times:
-    while(n != 0){
-        *dest = *src;   // Please don't segfault
-        ++dest;
-        ++src;
-        --n;
-    }
-    return 0;
+float floatMultiply(float a, float b, float c){
+    return a * b * c;
 }
 ```
-No error checking is done, this is left as an exercise for the reader.<br>
+
 [<- Back to table of contents](./../../../)<br>

@@ -6,3 +6,5 @@ asmtemplate/asmtemplate
 callCFunc/callCFunc
 
 varsize/varsize
+
+floatMultiply/floatMultiply

@@ -8,3 +8,5 @@ callCFunc/callCFunc
 varsize/varsize
 
 floatMultiply/floatMultiply
+
+memCopy/memCopy

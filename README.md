@@ -11,10 +11,12 @@ AT&T syntax, and compiled using 32 bit mode (Makefiles included). All code and c
 are in English.<br>
 
 **Table of contents:**<br>
-0. [Basic assembly template](./asmtemplate/)<br>
-1. [Convert an integer(0-9) to its ascii representation](./asciiConvert/)<br>
-2. [Calling a function written in C from assembly code](./callCFunc/)<br>
-3. [Copying bytes in memory(memcpy)](./memCopy/)<br>
+0. [Reference/cheat sheet for basic syntax and instructions](./asmBasics/)<br>
+1. [Small assembly template](./asmtemplate/)<br>
+2. [Convert an integer(0-9) to its ascii representation](./asciiConvert/)<br>
+3. [Calling a function written in C from assembly code](./callCFunc/)<br>
+4. [Copying bytes in memory(memcpy)](./memCopy/)<br>
+5. [Floats, multiply 2 floating point numbers](./floatMultiply/)<br>
 
 **The MIT License (MIT)**
 

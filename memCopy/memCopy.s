@@ -13,6 +13,8 @@ memCopy:
     # Standard:
     push %ebp               # save base pointer for safe return
     movl %esp, %ebp         # store constant stack pointer ref
+    pushl %esi              # save source index register (callee-saved)
+    pushl %edi              # save destination index register (callee-saved)
 
     # Get arguments:
     movl 16(%ebp), %ecx     # n, a count of how many bytes
@@ -40,6 +42,8 @@ iteration:
 
 # restore and return
 return:
+    popl %edi               # Restore callee-saved values
+    popl %esi               # Restore callee-saved values
     pop %ebp                # Standard, restore base pointer
     movl $0, %eax           # Return value, 0
     ret

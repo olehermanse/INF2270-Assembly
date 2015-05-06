@@ -4,7 +4,7 @@
 **Author:** olehermanse ( http://www.github.com/olehermanse )<br>
 **License:** The MIT License<br>
 
-**Assembly language sample code (INF2270 - Computer Architecture)**<br>
+**Assembly programming Introduction (INF2270 - Computer Architecture)**<br>
 This repository includes several basic examples of assembly code written by a group
 teacher for group lectures in INF2270 - Computer Architecture. All examples are using
 AT&T syntax, and compiled using 32 bit mode (Makefiles included). All code and comments

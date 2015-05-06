@@ -32,5 +32,5 @@ asciiConvert:
 # Return -1 on invalid inputs
 returnEarly:
     movl $-1, %eax          # Set return value -1
-    pop %ebp                # Restore %ebp register
+    popl %ebp               # Restore %ebp register
     ret                     # Return

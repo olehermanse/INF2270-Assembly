@@ -15,14 +15,15 @@ callCFunc:
     # Push argument on stack for c function call:
     pushl %eax
 
-    # Call our c function from cFunc.c with argument on stack:
+    # Call the c function from cFunc.c with argument on stack:
     call _cFunc
 
     # Remove argument from stack after function call:
-    popl %ecx
+    # We want to remove the argument from the stack (pop without saving the value)
+    addl $4, %esp       # We just move the stack pointer instead of using popl        
     
     # Restore base pointer and return:
-    pop %ebp
+    popl %ebp
 
     # Return with return value in eax:
     ret

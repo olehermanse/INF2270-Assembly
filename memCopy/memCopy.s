@@ -13,6 +13,10 @@ memCopy:
     # Standard:
     push %ebp               # save base pointer for safe return
     movl %esp, %ebp         # store constant stack pointer ref
+    
+    # Since the function that called memCopy might be using %edi and %esi
+    # we should save their values before overwriting them ( and restore them before ret )
+    # (Calle-save conventention)
     pushl %esi              # save source index register (callee-saved)
     pushl %edi              # save destination index register (callee-saved)
 
@@ -27,7 +31,7 @@ memCopy:
 iteration:
     # Check if done:
     cmpl $0, %ecx
-    jz return               # if counter(%ecx) == 0 Return 
+    jz return               # if counter == 0 Return 
     decl %ecx               # else --counter
     
     # Copy data:
@@ -42,8 +46,8 @@ iteration:
 
 # restore and return
 return:
-    popl %edi               # Restore callee-saved values
-    popl %esi               # Restore callee-saved values
+    popl %edi               # Restore callee-saved value
+    popl %esi               # Restore callee-saved value
     pop %ebp                # Standard, restore base pointer
     movl $0, %eax           # Return value, 0
     ret

@@ -102,6 +102,7 @@ asmBasics:
     # ADDITION: (+)
     addb $7, %al            # Add constant 7 to the 8 LSB of EAX (and AX)
     addb $18, %ah           # Add constant 18 to the 8 MSB of AX
+    # EAX: 00 | 00 | 12 | 07
     
     # SUBTRACTION: (-)
     subb $9, %ah           # Subtract 9 from the 8 MSB of AX ( bits 8-15 in EAX)

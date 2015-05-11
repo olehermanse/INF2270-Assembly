@@ -49,5 +49,5 @@ return:
     popl %edi               # Restore callee-saved value
     popl %esi               # Restore callee-saved value
     pop %ebp                # Standard, restore base pointer
-    movl $0, %eax           # Return value, 0
+    xorl %eax, %eax           # Return value, 0
     ret

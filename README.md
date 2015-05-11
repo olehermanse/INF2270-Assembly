@@ -16,7 +16,8 @@ are in English.<br>
 2. [Convert an integer(0-9) to its ascii representation](./asciiConvert/)<br>
 3. [Calling a function written in C from assembly code](./callCFunc/)<br>
 4. [Copying bytes in memory(memcpy)](./memCopy/)<br>
-5. [Floats, multiply 2 floating point numbers](./floatMultiply/)<br>
+5. [Global variables](./variables/)<br>
+6. [Floats, multiply 2 floating point numbers](./floatMultiply/)<br>
 
 **The MIT License (MIT)**
 

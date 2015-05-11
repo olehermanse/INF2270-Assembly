@@ -92,6 +92,8 @@ asmBasics:
     movl %eax, %ebx
     movl %ebx, %ecx
     movl %ecx, %edx         # All 4 registers are 0, similar to: a = b = c = d = 0 in C.
+    # xor is also commonly used to clear a register:
+    xorl %eax, %eax
     
     # INCREMENT: (+1)
     incl %eax               # The value in %eax is now 1 more than before

@@ -24,5 +24,5 @@ floatMultiply:
     # Result is on float stack, this is the return value
 
     pop %ebp                    # Standard, restore base pointer
-    # movl $0, %eax             # Value is not returned using %eax register
+    # Value is not returned using eax
     ret

@@ -1,4 +1,4 @@
-// Simple template for assembly code ( AT&T syntax )
+// Demonstration of 'variables' in assembly language
 // Author: github.com/olehermanse
 
 #include <stdio.h>

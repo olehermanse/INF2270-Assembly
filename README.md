@@ -18,6 +18,7 @@ are in English.<br>
 4. [Copying bytes in memory(memcpy)](./memCopy/)<br>
 5. [Global variables](./variables/)<br>
 6. [Floats, multiply 2 floating point numbers](./floatMultiply/)<br>
+7. [indexOf() and contains()](./indexOf/)<br>
 
 **The MIT License (MIT)**
 

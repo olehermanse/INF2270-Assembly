@@ -11,7 +11,7 @@
 
 _asmtemplate:                   # Mac OSX Compatibility
 asmtemplate:
-  push %ebp                     # save base pointer for safe return
+    push %ebp                   # save base pointer for safe return
     movl %esp, %ebp             # store constant stack pointer ref
     
     # Get argument from stack:

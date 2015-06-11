@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{multicol}
+\setlength\columnsep{24pt}
+\usepackage{tabularx}
+\setlength{\extrarowheight}{10pt}
+\usepackage{hyperref}
+\usepackage{minted}
+
+\addtolength{\oddsidemargin}{-1.2in}
+\addtolength{\evensidemargin}{-1.2in}
+\addtolength{\textwidth}{2.4in}
+\addtolength{\topmargin}{-1.0in}
+\addtolength{\textheight}{1.0in}
+
+\title{Assembly Language Sample Code}
+\author{Ole Herman Schumacher Elgesem}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+\section{Template}
+\inputminted{text}{asmtemplate/asmtemplate.s}
+\newpage
+\section{Basics}
+\inputminted{text}{asmBasics/asmBasics.s}
+\newpage
+\section{Conversion to ASCII}
+\inputminted{text}{asciiConvert/asciiConvert.s}
+\newpage
+\section{Calling a C Function}
+\subsection{The function defined in C}
+\inputminted{c}{callCFunc/cFunc.c}
+\subsection{Assembly code calling the function}
+\inputminted{text}{callCFunc/callCFunc.s}
+\newpage
+\section{Copying a section of memory}
+\inputminted{text}{memCopy/memCopy.s}
+\section{Using "Variables"}
+\inputminted{text}{variables/variables.s}
+\section{Index of Character and Contains Character}
+\subsection{Test program in C}
+\inputminted{c}{indexOf/indexOf.c}
+\newpage
+\subsection{Function in Assembly}
+\inputminted{text}{indexOf/indexOf.s}
+\end{document}

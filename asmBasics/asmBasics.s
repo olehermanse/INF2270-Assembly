@@ -58,6 +58,11 @@
 # %cx is the 16 LSB of %ecx, %cl is the 8 LSB of %cx, %ch is the 8 MSB of %cx
 # %dx is the 16 LSB of %edx, %dl is the 8 LSB of %dx, %dh is the 8 MSB of %dx
 
+# Something like this:
+# EAX: | 03 || 02 || 01 || 00 | We can use long operations on eax
+# EAX: |    ||    ||    ax    | We can use word operations on ax
+# EAX: |    ||    || ah || al | We can use byte operations on ah and al
+
 # ===END OF INTRODUCTION===
 
 # EXAMPLE CODE
@@ -71,9 +76,6 @@
 # Our "function" starts here:
 _asmBasics:                     # This is for Mac OS Compatibility
 asmBasics:
-    # We (usually) cant have all our data in registers.
-    # The values we are not currently working on will be stored in memory or on the stack
-    # "pushl" pushes a long (4 byte) value onto the stack:
     pushl %ebp                  # Save Base Frame pointer for later
                                 # Its old value is now at 4(%esp)
     movl %esp, %ebp             # Set %ebp to point to where the stack is now
@@ -88,31 +90,48 @@ asmBasics:
     # MOVING / COPYING DATA:
     # the mov instruction can copy data from one place to another:
     # mov(bwl) src, dest
-    movl $0, %eax
-    movl %eax, %ebx
-    movl %ebx, %ecx
-    movl %ecx, %edx         # All 4 registers are 0, similar to: a = b = c = d = 0 in C.
+    movl $0,    %eax        # eax = 0
+    movl %eax,  %ebx        # ebx = eax
+    movl %ebx,  %ecx        # ecx = ebx
+    movl %ecx,  %edx        # edx = ecx
+    
     # xor is also commonly used to clear a register:
-    xorl %eax, %eax
+    xorl %eax, %eax         # eax = 0
     
     # INCREMENT: (+1)
-    incl %eax               # The value in %eax is now 1 more than before
+    incl %eax               # ++eax
     
     # DECREMENT: (-1)
-    decl %eax               # The value in %eax is now 1 less than before
+    decl %eax               # --eax
     
     # ADDITION: (+)
-    addb $7, %al            # Add constant 7 to the 8 LSB of EAX (and AX)
-    addb $18, %ah           # Add constant 18 to the 8 MSB of AX
-    # EAX: 00 | 00 | 12 | 07
+    addb $7,    %al         # al += 7   // al is 8LSB of ax and eax
+    addb $18,   %ah         # ah += 18  // ah is 8MSB of ax and bits 8-15 of eax
     
     # SUBTRACTION: (-)
-    subb $9, %ah           # Subtract 9 from the 8 MSB of AX ( bits 8-15 in EAX)
+    subb $9,    %ah         # ah -= 9
     # 18 - 9 = 9
     
     # MULTIPLICATION: (*)
-    imulb %ah               # Multiplies %al with %ah and puts answer in %ax
+    imulb %ah               # ax = al * ah
     # 7 * 9 = 63
+
+    # DIVISION: (/)
+    movb $3,    %cl         # cl = 3
+    idivb %cl               # al = al/cl
+    andl $0x000000FF, %eax  # eax = eax	& 255 // Bitmask using AND, remove MSB
+    # 63 / 3 = 21
+    
+    # COMPARE AND COND. JMP: (IF)
+    cmpl $22, %eax          # if(eax == 21)
+    je if_body              #     goto if_body
+    
+error:                      # else          // Unexpected value - return 1
+    movl $1, %eax           #     returnvalue = 1
+    jmp return
+    
+if_body:
+    xorl %eax, %eax         # eax = 0       // We got the expected answer so we will ret 0
 
 return:
     # Restore callee-saved registers:
